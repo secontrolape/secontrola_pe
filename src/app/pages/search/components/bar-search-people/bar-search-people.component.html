@@ -1,0 +1,57 @@
+
+ <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+
+  <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+      <!-- <h3>Buscadores de Funcionarios</h3> -->
+      <p class="lead">
+        El siguiente buscador permite poder hacer seguimiento si algún funcionario público esta presente en algún informe de control  realizado por la Contraloria General de la Republica desde el año 2019 a la fecha.
+      </p>
+      <div class="container row section-input-search">
+        <!-- <h1>Buscar funcionario</h1> -->
+            <div class="form-group col-md">
+              <input type="text" style="text-transform:uppercase;color: #000;"  
+              class="form-control input-lg" id="txt-search" name="txt-search"
+              (keyup.enter)="search()"
+               placeholder="Buscar nombre o DNI del funcionario">
+            </div>
+            <div>
+              <button
+              fxflex="none"
+              class="btn btn-primary"
+              mat-flat-button
+              color="accent" (click)="search()">
+              Buscar
+            </button>
+            </div>           
+      </div>
+      <!-- <a href="https://pedroorden.shinyapps.io/monitor_legislativo/" class="btn btn-primary" target="_blank">Ver App<i class="icon-arrow-right"></i -->
+<!-- ></a> -->
+  </div>
+  <div class="col-12 col-md-7 pl-md-0 text-right">
+    <div class="container-result" *ngIf="(listResult.length>0)">
+      <div *ngFor="let item of listResult">
+        <div class="row lead">
+          <div class="card-nombre col-md">
+            <span>{{item.nombre_apellido}}</span>
+          </div>
+          <div class="card-dni">
+            <span>DNI: {{item.numero_documento}}</span>
+          </div>
+          <div class="card-button">
+            <button
+              fxflex="none"
+              class="btn btn-primary"
+              mat-flat-button
+              color="accent" (click)="goDetalle(item.numero_documento,item)">
+              Ver Detalle <i class="icon-arrow-right"></i>
+            </button>
+          </div>
+          
+          
+        </div>     
+      </div>
+    </div>
+      <img *ngIf="!(listResult.length>0)" class='lozad img-responsive img-clip-left-backward' src="https://raw.githubusercontent.com/Neracs/secontrola/master/src/assets/img/monitorlegislativo.png" alt="">
+  </div>
+</div>
+

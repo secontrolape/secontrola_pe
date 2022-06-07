@@ -1,0 +1,45 @@
+
+.card-datos-personales{
+  margin: 20px;
+    /* border: solid 1px; */
+    max-height: 316px;
+}
+
+.card-informes{
+  margin: 20px 20px 20px 0px;
+    /* border: solid 1px; */
+}
+.card-contrataciones{
+  margin: 20px;
+    /* border: solid 1px; */
+}
+.card-afiliacion{
+  margin: 20px;
+    /* border: solid 1px; */
+}
+
+.title{
+  margin-bottom: 15px;
+    margin-top: 10px;
+    border-bottom: solid 1px;
+    font-weight: 500;
+}
+.subtitle{
+  font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.text-p{
+  margin-top: 0px;
+    color: #e93e34;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.fuente{
+  margin-top:20px;
+}
+
+.bg-azul {
+  margin: 45px 20px 20px 0px;
+}
