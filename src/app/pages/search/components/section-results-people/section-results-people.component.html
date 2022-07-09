@@ -1,79 +1,116 @@
-<div class="row">
-  <div class="col-md" style="margin-left: 5em;">
+<div class="container">
+  <div class="row">
+    <div class="col-md" style="margin-left: 5em;">
+      <div class="row">
+        <div class="card-datos-personales col-md">
+          <p class="title">Datos Personales</p>
+          <p class="subtitle">Nombre de la persona:</p>
+          <p class="text-p">{{funcionario.nombre_apellido}}</p>
+          <p class="subtitle">DNI:</p>
+          <p class="text-p">{{funcionario.numero_documento}}</p>
+          <p class="subtitle">Región / Prov. / Distrito:</p>
+          <p class="text-p">{{funcionario.departamento}} / {{funcionario.provincia}} / {{funcionario.distrito}}</p>
+        </div>
+        
+        <div class="card-contrataciones col-md">
+          <p class="title">Contrataciones - OSCE</p>
+          <p class="subtitle">Miembro de Comité de Selección:</p>
+          <p class="text-p">{{funcionario.miembro_comite_osce}}</p>
+          <p class="subtitle">Provedor de Estado RNP:</p>
+          <p class="text-p">{{funcionario.entidad_sujeto_a_control}}</p>
+          <p class="subtitle">Tipo de Evento:</p>
+          <p class="text-p">{{funcionario.proveedor}}</p>
+        </div>
+        <div class="card-afiliacion col-md">
+          <p class="title">Afilicación Política - JNE</p>
+          <p class="subtitle">Tiene afiliación política:</p>
+          <p class="text-p">{{funcionario.afiliado_mp}}</p>
+          <p class="subtitle">Partido político o movimiento regional:</p>
+          <p class="text-p">{{funcionario.partido}}</p>
+        </div>
+      </div>
+    <div>
+      <div class="col-md">
+        <div class="card-informes col-md">
+          <p class="title">Informes de Control CGR</p>
+          <p class="subtitle">Título del Informe:</p>
+          <p class="text-p">{{funcionario.titulo_informe}} <a [href]="funcionario.url_informe"> .Ver Informe</a></p>
+          <!-- <a [href]="funcionario.url_informe" class="btn btn-primary">Ver Informe</a> -->
+          <p class="subtitle">Objetivo del Informe:</p>
+          <p class="text-p">{{funcionario.objetivo_informe}} <a [href]="funcionario.url_ficha_resumen">Ver Resumen</a></p>
+          <!-- <a [href]="funcionario.url_ficha_resumen" class="btn btn-primary">Ver Resumen</a>  -->
+          <p class="subtitle">Código de Informe:</p>
+          <p class="text-p">{{funcionario.n_informe}}</p>
+          <p class="subtitle">Entidad sujeta a control:</p>
+          <p class="text-p">{{funcionario.entidad_sujeto_a_control}}</p>
+          <p class="subtitle">Tipo de Evento:</p>
+          <p class="text-p">{{funcionario.evento}}</p>
+          <p class="subtitle">Tipo Responsabilidad:</p>
+          <p class="text-p">{{funcionario.tipo_responsabilidad}}</p>
+          <br>
+          <br>
+          <p class="fuente">Fuente: CGR, OSCE y JNE</p>
+        </div>
+      </div>
+    </div>
+    <!--
     <div class="row">
-      <div class="card-datos-personales col-md">
-        <p class="title">Datos Personales</p>
-        <p class="subtitle">Nombre de la persona</p>
-        <p class="text-p">{{funcionario.nombre_apellido}}</p>
-        <p class="subtitle">Documento de identidad</p>
-        <p class="text-p">{{funcionario.numero_documento}}</p>
-        <p class="subtitle">Región / Prov. / Distrito</p>
-        <p class="text-p">{{funcionario.departamento}} / {{funcionario.provincia}} / {{funcionario.distrito}}</p>
+      <div class="col-md">
       </div>
-      <div class="card-informes col-md">
-        <p class="title">Informes de Control CGR</p>
-        <p class="subtitle">Código de Informe</p>
-        <p class="text-p">{{funcionario.n_informe}}</p>
-        <p class="subtitle">Entidad sujeta a control</p>
-        <p class="text-p">{{funcionario.entidad_sujeto_a_control}}</p>
-        <p class="subtitle">Tipo de Evento</p>
-        <p class="text-p">{{funcionario.evento}}</p>
-        <p class="subtitle">Tipo Responsabilidad</p>
-        <p class="text-p">{{funcionario.tipo_responsabilidad}}</p>
-        <p class="fuente">Fuente: Contraloría General de la República</p>
+      <div class="card-contrataciones col-md">
+        <p class="title">Contrataciones - OSCE</p>
+        <p class="subtitle">Miembro de Comité de Selección</p>
+          <p class="text-p">{{funcionario.miembro_comite_osce}}</p>
+          <p class="subtitle">Provedor de Estado RNP</p>
+          <p class="text-p">{{funcionario.entidad_sujeto_a_control}}</p>
+          <p class="subtitle">Tipo de Evento</p>
+          <p class="text-p">{{funcionario.proveedor}}</p>
+          <p class="fuente">Fuente: OSCE</p>
       </div>
     </div>
-
-  <div class="row">
-    <div class="col-md">
+    <div class="row">
+      <div class="col-md">
+      </div>
+      <div class="card-afiliacion col-md">
+        <p class="title">Afilicación Política - JNE</p>
+        <p class="subtitle">Tiene afiliación política</p>
+        <p class="text-p">{{funcionario.afiliado_mp}}</p>
+        <p class="subtitle">Partido político o movimiento regional</p>
+        <p class="text-p">{{funcionario.partido}}</p>
+        <p class="fuente">Fuente: Jurado Nacional de Elecciones - JNE</p>
+      </div>
     </div>
-    <div class="card-contrataciones col-md">
-      <p class="title">Contrataciones - OSCE</p>
-      <p class="subtitle">Miembro de Comité de Selección</p>
-        <p class="text-p">{{funcionario.miembro_comite_osce}}</p>
-        <p class="subtitle">Provedor de Estado RNP</p>
-        <p class="text-p">{{funcionario.entidad_sujeto_a_control}}</p>
-        <p class="subtitle">Tipo de Evento</p>
-        <p class="text-p">{{funcionario.proveedor}}</p>
-        <p class="fuente">Fuente: OSCE</p>
-    </div>
+    -->
   </div>
+    
 
-  <div class="row">
-    <div class="col-md">
-    </div>
-    <div class="card-afiliacion col-md">
-      <p class="title">Afilicación Política - JNE</p>
-      <p class="subtitle">Tiene afiliación política</p>
-      <p class="text-p">{{funcionario.afiliado_mp}}</p>
-      <p class="subtitle">Partido político o movimiento regional</p>
-      <p class="text-p">{{funcionario.partido}}</p>
-      <p class="fuente">Fuente: Jurado Nacional de Elecciones - JNE</p>
-    </div>
-  </div>
-</div>
-  <div class="col-md"  style="padding-top: 33px;">
-    <a
-        class="bg-azul"
-        mat-raised-button
-        [href]="funcionario.url_informe"
-        target="_blank"
-      >
-        <!-- <mat-icon class="m-l-5 m-r-5">public</mat-icon> -->
-        Informe
-      </a>
+
+    <!--
+    <div class="col-md"  style="padding-top: 33px;">
       <a
-        class="bg-azul"
-        mat-raised-button
-        [href]="funcionario.url_ficharesumen"
-        target="_blank"
-      >
-        <!-- <mat-icon class="m-l-5 m-r-5">public</mat-icon> -->
-        Ficha Resumen
-      </a>
-      <pdf-viewer [src]="pdfSource" [original-size]="false"></pdf-viewer>
-
-    <!-- <iframe [src]="funcionario.url_informe" style="width:100%; height:700px;"></iframe>
-    <iframe [src]="funcionario.url_ficha_resumen" style="width:100%; height:700px;"></iframe>      -->
+          class="bg-azul"
+          mat-raised-button
+          [href]="funcionario.url_informe"
+          target="_blank"
+        > -->
+          <!-- <mat-icon class="m-l-5 m-r-5">public</mat-icon> -->
+          <!--
+          Informe
+        </a>
+        <a
+          class="bg-azul"
+          mat-raised-button
+          [href]="funcionario.url_ficharesumen"
+          target="_blank"
+        > -->
+          <!-- <mat-icon class="m-l-5 m-r-5">public</mat-icon> -->
+          <!--
+          Ficha Resumen
+        </a>
+        <pdf-viewer [src]="pdfSource" [original-size]="false"></pdf-viewer>
+        -->
+      <!-- <iframe [src]="funcionario.url_informe" style="width:100%; height:700px;"></iframe>
+      <iframe [src]="funcionario.url_ficha_resumen" style="width:100%; height:700px;"></iframe>      --> 
+    <!-- </div> -->
   </div>
 </div>

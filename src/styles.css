@@ -10869,7 +10869,7 @@ span a:hover {
 
 @media (min-width:768px) {
     .contact {
-        padding: 100px 80px
+        padding: 80px 200px
     }
 }
 
@@ -10887,7 +10887,7 @@ span a:hover {
 }
 
 .contact__info span {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     line-height: normal;
     color: #000
@@ -11096,7 +11096,7 @@ html body {
 
 @media (min-width:768px) {
     .about__profile-picture {
-        margin-top: 0;
+        margin-top: 7%;
         -webkit-box-flex: 0;
         flex: 0 0 50%;
         max-width: 50%;
@@ -11855,7 +11855,7 @@ textarea:focus {
     align-items: center;
     position: relative;
     margin-bottom: 0px;
-    padding-top: 100px
+    padding-top: 30px
 }
 
 .rad-showcase__bg {
@@ -11863,10 +11863,10 @@ textarea:focus {
     justify-content: flex-start;
     -webkit-box-align: center;
     align-items: center;
-    top: 20%;
+    top: 25%;
     height: 50%;
     position: absolute;
-    left: 48%;
+    left: 52%;
     z-index: 0;
     display: none
 }
